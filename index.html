@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e8ede5">
+<meta name="description" content="Browse a collection of vinyl record album covers.">
+<title>Music Album Gallery</title>
+<link rel="stylesheet" href="style.css">
+<script src="gallery.js" defer></script>
+</head>
+<body>
+<header>
+<div class="kicker">The vinyl collection</div>
+<h1>Music Album Gallery</h1>
+<p class="subtitle">Explore the record covers. Select any album to see it larger.</p>
+</header>
+<main>
+<div class="toolbar">
+<span id="count" class="count" aria-live="polite">Loading albums…</span>
+<input id="search" class="search" type="search" placeholder="Search albums or artists…" aria-label="Search albums or artists">
+</div>
+<section id="gallery" class="grid" aria-label="Album cover gallery"></section>
+<p id="empty" class="empty" hidden>No albums match your search.</p>
+</main>
+<footer>Music Album Gallery · View-only collection</footer>
+<dialog id="viewer" class="viewer" aria-label="Enlarged album cover">
+<button id="close" class="close" aria-label="Close image">×</button>
+<button id="prev" class="nav prev" aria-label="Previous album">‹</button>
+<div class="viewer-inner">
+<img id="viewer-image" alt="">
+<div id="viewer-title" class="viewer-title"></div>
+</div>
+<button id="next" class="nav next" aria-label="Next album">›</button>
+</dialog>
+</body>
+</html>
